@@ -1,0 +1,21 @@
+# fly.toml app configuration file generated for argon on 2024-12-29T15:15:26-05:00
+#
+# See https://fly.io/docs/reference/configuration/ for information about how to use this file.
+#
+
+app = 'argon'
+primary_region = 'bos'
+
+[build]
+  dockerfile = 'Dockerfile'
+
+[deploy]
+
+[http_service]
+  internal_port = 8080
+  force_https = true
+
+[[vm]]
+  memory = '1gb'
+  cpu_kind = 'shared'
+  cpus = 1
